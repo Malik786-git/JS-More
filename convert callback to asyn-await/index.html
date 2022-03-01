@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+// fetch in simple way....
+        // fetch('main.json')
+        //     .then((res) => res.json()).then((data)=> console.log(data))
+//  by usign async and awiat..
+async function fetchData() {
+    let res = await fetch('main.json');
+    // console.log(res.status);
+    if (res.status === 200) {
+        let data = await res.json()
+        console.log(data);
+    }
+}
+fetchData(); // so here we achieve the same goal by using the async and await.....
+
+ </script>
+</body>
+
+</html>
